@@ -1,10 +1,11 @@
 # FAST_LIO_LC
 
-The **tight** integration of [FAST-LIO](https://github.com/hku-mars/FAST_LIO) with Radius-Search-based loop closure module.
 
 **FAST-LIO** (Fast LiDAR-Inertial Odometry) is a computationally efficient and robust LiDAR-inertial odometry package. It fuses LiDAR feature points with IMU data using a tightly-coupled iterated extended Kalman filter. But it doesn't have a loop closure module to eliminate the accumulated drift.
 
 Therefore, this project implements the pose graph optimization with a radius-search-based loop closure module which refers to [FAST_LIO_SLAM](https://github.com/gisbi-kim/FAST_LIO_SLAM). And the pose and map in the iterated extended Kalman filter of FAST-LIO will be updated according to the optimization which is a key difference with [FAST_LIO_SLAM](https://github.com/gisbi-kim/FAST_LIO_SLAM).
+
+All the packages have been modified in order to build the packages using catkin_make command . Git clone these files directly in order to run the simulation in UBUNTU 20.04  ROS Noetic version ( Compatible) & necessary changes might need to be done if used in other versions such as 18.04 or 20.04
 
 - [FAST_LIO_LC](#fast_lio_lc)
   - [1. Prerequisites](#1-prerequisites)
@@ -25,7 +26,7 @@ Therefore, this project implements the pose graph optimization with a radius-sea
 
 ```bash
 cd YOUR_WORKSPACE/src
-git clone https://github.com/yanliang-wang/FAST_LIO_LC.git
+git clone  https://github.com/Jayamvs369/fliolc.git
 cd ..
 catkin_make
 ```
@@ -49,14 +50,9 @@ rosbag play  T3F2-2021-08-02-15-00-12.bag  -r 2
 > rosbag play  T3F2-2021-08-02-15-00-12.bag  -r 2
 > ```
 
-## 4. Example results
-
-video: [Youtube link](https://youtu.be/W5HYYPYBrn8) , [Bilibili link](https://www.bilibili.com/video/BV1sT4y1D7DC/)
-
-![example_results](doc/fast-lio-lc-output.gif)
 
 ## Acknowledgements 
-In this project, the LIO module refers to [FAST-LIO](https://github.com/hku-mars/FAST_LIO) and the pose graph optimization refers to [FAST_LIO_SLAM](https://github.com/gisbi-kim/FAST_LIO_SLAM).
+The LIO module refers to [FAST-LIO](https://github.com/hku-mars/FAST_LIO) and the pose graph optimization refers to [FAST_LIO_SLAM](https://github.com/gisbi-kim/FAST_LIO_SLAM).
 
-Many thanks for their work.
+
 
