@@ -17,10 +17,11 @@ All the packages have been modified in order to build the packages using catkin_
 
 ## 1. Prerequisites
 
-- Ubuntu 18.04 and ROS Melodic
-- PCL >= 1.8 (default for Ubuntu 18.04)
-- Eigen >= 3.3.4 (default for Ubuntu 18.04)
-- GTSAM >= 4.0.0(tested on 4.0.0-alpha2)
+- Ubuntu 20.04 and ROS Noetic
+- PCL 
+- Eigen 
+- GTSAM
+- All the above three can be git cloned/updated if required for the version mentioned .
 
 ## 2. Build
 
